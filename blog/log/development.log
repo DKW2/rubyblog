@@ -11118,3 +11118,196 @@ Processing by ArticlesController#show as TURBO_STREAM
 Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 5450)
 
 
+Started GET "/" for ::1 at 2023-06-19 16:40:48 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?[0m  [["status", "public"]]
+  ↳ app/models/concerns/visible.rb:12:in `public_count'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:6
+  Rendered articles/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 19338)
+  Rendered layout layouts/application.html.erb (Duration: 53.8ms | Allocations: 54637)
+Completed 200 OK in 65ms (Views: 55.0ms | ActiveRecord: 0.4ms | Allocations: 65158)
+
+
+Started GET "/" for ::1 at 2023-06-19 16:41:43 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainPageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main_page/index.html.erb within layouts/application
+  Rendered main_page/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 457)
+  Rendered layout layouts/application.html.erb (Duration: 34.1ms | Allocations: 35672)
+Completed 200 OK in 41ms (Views: 35.6ms | ActiveRecord: 0.0ms | Allocations: 42860)
+
+
+Started GET "/" for ::1 at 2023-06-19 16:42:36 -0700
+Processing by MainPageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main_page/index.html.erb within layouts/application
+  Rendered main_page/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 145)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 3022)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 4277)
+
+
+Started GET "/" for ::1 at 2023-06-19 16:45:46 -0700
+Processing by MainPageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main_page/index.html.erb within layouts/application
+  Rendered main_page/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 9865)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 12733)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 13957)
+
+
+Started GET "/articles" for ::1 at 2023-06-19 16:45:47 -0700
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?[0m  [["status", "public"]]
+  ↳ app/models/concerns/visible.rb:12:in `public_count'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:6
+  Rendered articles/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 18940)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 21563)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.6ms | Allocations: 22787)
+
+
+Started GET "/articles" for ::1 at 2023-06-19 16:45:49 -0700
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?[0m  [["status", "public"]]
+  ↳ app/models/concerns/visible.rb:12:in `public_count'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:6
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1308)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3660)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.2ms | Allocations: 4041)
+
+
+Started GET "/articles" for ::1 at 2023-06-19 16:50:47 -0700
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?[0m  [["status", "public"]]
+  ↳ app/models/concerns/visible.rb:12:in `public_count'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:6
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1686)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 15395)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms | Allocations: 16623)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `main_page' for #<ActionView::Base:0x0000000000c468>
+Did you mean?  main_app):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:     <a><%= link_to "Back to main page", main_page %><a>
+    15:     <%= yield %>
+    16:   </body>
+    17: </html>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/articles" for ::1 at 2023-06-19 16:50:58 -0700
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?[0m  [["status", "public"]]
+  ↳ app/models/concerns/visible.rb:12:in `public_count'
+  [1m[36mArticle Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:6
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1686)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 7761)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms | Allocations: 8944)
+
+
+  
+ActionView::Template::Error (undefined method `main_page_path' for #<ActionView::Base:0x0000000000c788>
+Did you mean?  main_app):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:     <a><%= link_to "Back to main page", :main_page %><a>
+    15:     <%= yield %>
+    16:   </body>
+    17: </html>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/articles" for ::1 at 2023-06-19 16:51:25 -0700
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?[0m  [["status", "public"]]
+  ↳ app/models/concerns/visible.rb:12:in `public_count'
+  [1m[36mArticle Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:6
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1677)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 4583)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms | Allocations: 5795)
+
+
+Started GET "/" for ::1 at 2023-06-19 16:51:26 -0700
+Processing by MainPageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main_page/index.html.erb within layouts/application
+  Rendered main_page/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 267)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2915)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 3854)
+
+
+Started GET "/" for ::1 at 2023-06-19 16:51:27 -0700
+Processing by MainPageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main_page/index.html.erb within layouts/application
+  Rendered main_page/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 2437)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 2770)
+
+
+Started GET "/articles" for ::1 at 2023-06-19 16:51:27 -0700
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?[0m  [["status", "public"]]
+  ↳ app/models/concerns/visible.rb:12:in `public_count'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:6
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1314)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3685)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.2ms | Allocations: 4020)
+
+
+Started GET "/" for ::1 at 2023-06-19 16:51:28 -0700
+Processing by MainPageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main_page/index.html.erb within layouts/application
+  Rendered main_page/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2415)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 2731)
+
+
+Started GET "/articles" for ::1 at 2023-06-19 16:51:30 -0700
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?[0m  [["status", "public"]]
+  ↳ app/models/concerns/visible.rb:12:in `public_count'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:6
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1188)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3563)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.2ms | Allocations: 3892)
+
+
+Started GET "/" for ::1 at 2023-06-19 16:51:30 -0700
+Processing by MainPageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main_page/index.html.erb within layouts/application
+  Rendered main_page/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2429)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 2745)
+
+

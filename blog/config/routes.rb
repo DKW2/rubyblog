@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  root "articles#index"
+  root "main_page#index"
+
+  get "/articles", to: "articles#index"
 
   resources :articles do
     resources :comments
