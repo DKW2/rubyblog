@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root "main_page#index"
 
   get "/articles", to: "articles#index"
+  get "/minesweeper", to: "minesweeper#index"
 
   resources :articles do
     resources :comments

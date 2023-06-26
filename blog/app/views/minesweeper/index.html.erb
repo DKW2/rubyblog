@@ -1,0 +1,15 @@
+<h1>Place minesweeper here!</h1>
+
+<%= content_tag(:div, nil, data: {
+    controller: "minesweeper",
+}) do %>
+    <%= content_tag( :span, "Playing", data: {
+    minesweeper_target: "status"    
+    }) %>
+    <br/>
+    <%= content_tag( :canvas, nil, data: {
+    minesweeper_target: "canvas"
+    }) %>
+    <br/>
+    <%= button_tag "Reset", data: { action: "click->minesweeper#reset" }, id: "reset_button" %>
+<% end %>
