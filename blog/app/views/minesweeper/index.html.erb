@@ -6,10 +6,21 @@
     <%= content_tag( :span, "Playing", data: {
     minesweeper_target: "status"    
     }) %>
+    <%= content_tag( :span, " | Bombs Remaining: " ) %>
+    <%= content_tag( :span, "", data: { minesweeper_target: "remainingbombs" }, style: "font-weight: bold" ) %>
     <br/>
     <%= content_tag( :canvas, nil, data: {
     minesweeper_target: "canvas"
     }) %>
+    <br/>
+    <%= content_tag( :span, "Width:", style: "width: 3em" )%>
+    <%= input_tag "Width", "width" %>
+    <br/>
+    <%= content_tag( :span, "Height:" )%>
+    <%= input_tag "Height", "height" %>
+    <br/>
+    <%= content_tag( :span, "Bombs:" )%>
+    <%= input_tag "Bombs", "bombs" %>
     <br/>
     <%= button_tag "Reset", data: { action: "click->minesweeper#reset" }, id: "reset_button" %>
 <% end %>

@@ -3,23 +3,21 @@ import Cell from "../minesweeper/cell"
 
 // Connects to data-controller="minesweeper"
 export default class extends Controller {
-  static targets = ["canvas", "status"];
+  static targets = ["canvas", "status", "width", "height", "bombs", "remainingbombs"];
 
   connect() {
     
     this.canvas = this.canvasTarget;
     this.statusDiv = this.statusTarget;
+    this.widthInput = $( this.widthTarget );
+    this.heightInput = $( this.heightTarget );
+    this.bombInput = $( this.bombsTarget );
+    this.remainingBombs = $( this.remainingbombsTarget );
     this.context = this.canvas.getContext("2d");
+
     this.PLAY = "Playing";
     this.LOSE = "You Lose!";
     this.WIN = "You Win!";
-
-    this.width = 10;
-    this.height = 10;
-    this.bombNum = 10;
-
-    this.canvas.width = this.width * Cell.width;
-    this.canvas.height = this.height * Cell.height;
 
     this.mouseHandlers();
     this.resetGame();
@@ -27,10 +25,17 @@ export default class extends Controller {
 
   resetGame()
   {
+    this.width = this.widthInput.val();
+    this.height = this.heightInput.val();
+    this.bombNum = this.bombInput.val();
+    this.canvas.width = this.width * Cell.width;
+    this.canvas.height = this.height * Cell.height;
+
     this.status = this.PLAY;
     this.statusDiv.innerHTML = this.status;
     this.currentBombCount = this.bombNum;
     this.currentTileCount = this.width * this.height - this.bombNum;
+    this.remainingBombs.text( this.currentBombCount );
     this.initGrid();
     this.draw();
   }
@@ -167,6 +172,7 @@ export default class extends Controller {
           this.currentBombCount -= 1;
         else
           this.currentBombCount += 1;
+        this.remainingBombs.text( this.currentBombCount );
         cell.flagged = !cell.flagged;
         cell.draw();
       }
@@ -180,10 +186,13 @@ export default class extends Controller {
     if( !cell.revealed && !cell.isBomb && !cell.flagged )
     {
       this.revealCell( x, y );
-      var neighbors = this.getCellNeighbors( x, y );
-      for( let neighbor of neighbors )
+      if( cell.val == 0 )
       {
-        this.clearEmptyCells( neighbor[0], neighbor[1] );
+        var neighbors = this.getCellNeighbors( x, y );
+        for( let neighbor of neighbors )
+        {
+          this.clearEmptyCells( neighbor[0], neighbor[1] );
+        }
       }
     }
   }
